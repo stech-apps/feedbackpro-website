@@ -1,26 +1,57 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  /* Tinted neutrals — every neutral carries a trace of brand blue (#2563eb) */
+  --color-fp-bg: #F2F6FF;          /* page bg — white + 3% brand blue */
+  --color-fp-surface: #FAFBFF;     /* card/surface — white + 1.5% brand blue */
+  --color-fp-surface-2: #EBF0FA;   /* alt surface — white + 5% brand blue */
+  --color-fp-navy: #00174b;
+  --color-fp-navy-hover: #003ea8;
+  --color-fp-blue: #2563eb;
+  --color-fp-blue-dark: #1d4ed8;
+  --color-fp-blue-light: #eff6ff;
+  --color-fp-text: #0F1523;        /* near-black with blue undertone */
+  --color-fp-muted: #3B4862;       /* blue-slate muted text */
+  --color-fp-muted-2: #697890;     /* lighter muted */
+  --color-fp-border: #BCC5E3;      /* grey + 6% brand blue */
+  --color-fp-border-dark: #97A3C3; /* grey + 8% brand blue */
+  --color-fp-success: #22c55e;
+  --color-fp-success-light: #f0fdf4;
+  --color-fp-amber: #f59e0b;
+  --font-display: var(--font-manrope);
+  --font-body: var(--font-inter);
+  /* Brand-tinted shadows */
+  --shadow-fp-card: 0 1px 3px rgba(37, 99, 235, 0.06), 0 0 0 1px rgba(37, 99, 235, 0.04);
+  --shadow-fp-card-hover: 0 4px 20px rgba(37, 99, 235, 0.12), 0 0 0 1px rgba(37, 99, 235, 0.10);
+  --shadow-fp-nav: 0 1px 0 rgba(37, 99, 235, 0.10), 0 4px 16px rgba(37, 99, 235, 0.06);
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F2F6FF;
+  --foreground: #0F1523;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.fp-card {
+  box-shadow: 0 1px 3px rgba(37, 99, 235, 0.05);
+  transition: box-shadow 200ms ease, transform 200ms ease, border-color 200ms ease;
+}
+.fp-card:hover {
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.10), 0 0 0 1px rgba(37, 99, 235, 0.08);
+  transform: translateY(-2px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter, 'Inter', system-ui, sans-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-manrope, 'Manrope', system-ui, sans-serif);
 }
