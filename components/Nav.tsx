@@ -59,7 +59,7 @@ export default function Nav() {
           {["Features", "How It Works", "Pricing"].map((item) => (
             <a
               key={item}
-              href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+              href={`/#${item.toLowerCase().replace(/\s+/g, "-")}`}
               className="text-[#3B4862] dark:text-[#8fa3c8] hover:text-[#0F1523] dark:hover:text-white text-sm font-medium transition-colors"
             >
               {item}
@@ -141,7 +141,7 @@ export default function Nav() {
           {["Features", "How It Works", "Pricing"].map((item) => (
             <a
               key={item}
-              href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+              href={`/#${item.toLowerCase().replace(/\s+/g, "-")}`}
               className="text-[#0F1523] dark:text-[#c5d4ee] text-sm font-medium"
               onClick={() => setMenuOpen(false)}
             >
