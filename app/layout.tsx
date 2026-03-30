@@ -31,7 +31,7 @@ export default function RootLayout({
     <html lang="en" className={`${manrope.variable} ${inter.variable}`} suppressHydrationWarning>
       <head>
         {/* Anti-flash: set dark class before first paint based on stored preference or system preference */}
-        <script dangerouslySetInnerHTML={{ __html: `(function(){var s=localStorage.getItem('theme'),p=window.matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(s!=='light'&&p)){document.documentElement.classList.add('dark');}})();` }} />
+        <script dangerouslySetInnerHTML={{ __html: `(function(){if(localStorage.getItem('theme')==='dark'){document.documentElement.classList.add('dark');}})();` }} />
       </head>
       <body className="min-h-screen flex flex-col bg-(--background) text-(--foreground)">
         {children}
