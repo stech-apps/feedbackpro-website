@@ -89,33 +89,33 @@ export default function Pricing() {
   const [currency, setCurrency] = useState<Currency>("PKR");
 
   return (
-    <section id="pricing" className="py-24 px-6 bg-[#F2F6FF]">
+    <section id="pricing" className="py-24 px-6 bg-[#F2F6FF] dark:bg-[#0f1523]">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
-          <p className="text-[#2563eb] text-sm font-semibold uppercase tracking-widest mb-3">
+          <p className="text-[#2563eb] dark:text-[#60a5fa] text-sm font-semibold uppercase tracking-widest mb-3">
             Pricing
           </p>
           <h2
-            className="text-4xl md:text-5xl font-bold text-[#00174b] leading-tight mb-4"
+            className="text-4xl md:text-5xl font-bold text-[#00174b] dark:text-white leading-tight mb-4"
             style={{ fontFamily: "var(--font-manrope)" }}
           >
             Simple, honest pricing
           </h2>
-          <p className="text-[#3B4862] text-lg max-w-xl mx-auto mb-6">
+          <p className="text-[#3B4862] dark:text-[#8fa3c8] text-lg max-w-xl mx-auto mb-6">
             Start free for a month. Upgrade when you are ready. No contracts.
           </p>
 
           {/* Currency toggle */}
-          <div className="inline-flex items-center bg-[#E5EAF7] rounded-lg p-1 gap-1">
+          <div className="inline-flex items-center bg-[#E5EAF7] dark:bg-[#1a2235] rounded-lg p-1 gap-1">
             {(["PKR", "USD"] as Currency[]).map((c) => (
               <button
                 key={c}
                 onClick={() => setCurrency(c)}
                 className={`px-5 py-1.5 rounded-md text-sm font-semibold transition-all ${
                   currency === c
-                    ? "bg-[#00174b] text-white shadow-sm"
-                    : "text-[#3B4862] hover:text-[#0F1523]"
+                    ? "bg-[#00174b] dark:bg-[#2563eb] text-white shadow-sm"
+                    : "text-[#3B4862] dark:text-[#8fa3c8] hover:text-[#0F1523] dark:hover:text-white"
                 }`}
               >
                 {c}
@@ -131,8 +131,8 @@ export default function Pricing() {
               key={plan.name}
               className={`relative rounded-lg border p-7 flex flex-col ${
                 plan.popular
-                  ? "bg-[#00174b] border-[#00174b] text-white shadow-xl shadow-[#00174b]/20"
-                  : "bg-[#FAFBFF] border-[#BCC5E3]"
+                  ? "bg-[#00174b] dark:bg-[#1e3a6e] border-[#00174b] dark:border-[#2d5099] text-white shadow-xl shadow-[#00174b]/20"
+                  : "bg-[#FAFBFF] dark:bg-[#141d2e] border-[#BCC5E3] dark:border-[#2d3a55]"
               }`}
             >
               {plan.popular && (
@@ -146,7 +146,7 @@ export default function Pricing() {
               <div className="mb-6">
                 <p
                   className={`text-xs font-semibold uppercase tracking-widest mb-3 ${
-                    plan.popular ? "text-[#93c5fd]" : "text-[#2563eb]"
+                    plan.popular ? "text-[#93c5fd]" : "text-[#2563eb] dark:text-[#60a5fa]"
                   }`}
                 >
                   {plan.name}
@@ -154,7 +154,7 @@ export default function Pricing() {
                 <div className="flex items-baseline gap-1 mb-1">
                   <span
                     className={`text-3xl font-bold ${
-                      plan.popular ? "text-white" : "text-[#00174b]"
+                      plan.popular ? "text-white" : "text-[#00174b] dark:text-white"
                     }`}
                     style={{ fontFamily: "var(--font-manrope)" }}
                   >
@@ -163,7 +163,7 @@ export default function Pricing() {
                   {plan.pricePKR !== "Free" && plan.pricePKR !== "Custom" && (
                     <span
                       className={`text-sm ${
-                        plan.popular ? "text-white/60" : "text-[#3B4862]"
+                        plan.popular ? "text-white/60" : "text-[#3B4862] dark:text-[#8fa3c8]"
                       }`}
                     >
                       /{plan.period}
@@ -175,7 +175,7 @@ export default function Pricing() {
                 )}
                 <p
                   className={`text-sm ${
-                    plan.popular ? "text-white/70" : "text-[#3B4862]"
+                    plan.popular ? "text-white/70" : "text-[#3B4862] dark:text-[#8fa3c8]"
                   }`}
                 >
                   {plan.description}
@@ -201,7 +201,7 @@ export default function Pricing() {
                     </svg>
                     <span
                       className={`text-sm ${
-                        plan.popular ? "text-white/80" : "text-[#3B4862]"
+                        plan.popular ? "text-white/80" : "text-[#3B4862] dark:text-[#8fa3c8]"
                       }`}
                     >
                       {f}
@@ -218,7 +218,7 @@ export default function Pricing() {
                     ? "bg-[#2563eb] hover:bg-[#1d4ed8] text-white"
                     : plan.popular
                     ? "bg-white/10 hover:bg-white/20 text-white border border-white/20"
-                    : "border border-[#BCC5E3] hover:border-[#00174b] text-[#00174b] bg-[#FAFBFF]"
+                    : "border border-[#BCC5E3] dark:border-[#2d3a55] hover:border-[#00174b] dark:hover:border-[#2563eb] text-[#00174b] dark:text-[#c5d4ee] bg-[#FAFBFF] dark:bg-transparent"
                 }`}
               >
                 {plan.cta}
@@ -228,7 +228,7 @@ export default function Pricing() {
         </div>
 
         {/* Note */}
-        <p className="text-center text-xs text-[#697890] mt-8">
+        <p className="text-center text-xs text-[#697890] dark:text-[#4d6080] mt-8">
           {currency === "PKR"
             ? "All prices in Pakistani Rupees (PKR). Annual plan billed as a lump sum upfront. Cancel anytime."
             : "All prices in USD. Annual plan billed upfront. Cancel anytime."}

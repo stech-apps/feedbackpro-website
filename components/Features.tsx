@@ -5,8 +5,8 @@ const largeCards = [
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <rect x="3" y="3" width="18" height="18" rx="3" stroke="#2563eb" strokeWidth="1.5" />
-        <path d="M7 9h10M7 12h7M7 15h5" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" />
+        <rect x="3" y="3" width="18" height="18" rx="3" stroke="#1093bb" strokeWidth="1.5" />
+        <path d="M7 9h10M7 12h7M7 15h5" stroke="#1093bb" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
     ),
     title: "Customizable Surveys",
@@ -18,9 +18,9 @@ const largeCards = [
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <rect x="7" y="2" width="10" height="18" rx="2" stroke="#2563eb" strokeWidth="1.5" />
-        <circle cx="12" cy="17" r="1" fill="#2563eb" />
-        <path d="M9 6h6" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" />
+        <rect x="7" y="2" width="10" height="18" rx="2" stroke="#1093bb" strokeWidth="1.5" />
+        <circle cx="12" cy="17" r="1" fill="#1093bb" />
+        <path d="M9 6h6" stroke="#1093bb" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
     ),
     title: "Mobile Web Surveys",
@@ -36,9 +36,9 @@ const smallCards = [
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" stroke="#2563eb" strokeWidth="1.5" />
-        <path d="M8.5 12.5l2.5 2.5L15.5 10" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M12 6v2M12 16v2M6 12H4M20 12h-2" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" opacity="0.4" />
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" stroke="#1093bb" strokeWidth="1.5" />
+        <path d="M8.5 12.5l2.5 2.5L15.5 10" stroke="#1093bb" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M12 6v2M12 16v2M6 12H4M20 12h-2" stroke="#1093bb" strokeWidth="1.5" strokeLinecap="round" opacity="0.4" />
       </svg>
     ),
     title: "Works Offline",
@@ -49,10 +49,10 @@ const smallCards = [
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <rect x="5" y="2" width="14" height="20" rx="2" stroke="#2563eb" strokeWidth="1.5" />
-        <path d="M9 7h6M9 11h6M9 15h4" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" />
-        <circle cx="17" cy="17" r="4" fill="#eff6ff" stroke="#2563eb" strokeWidth="1.5" />
-        <path d="M17 15.5v1.5l1 1" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" />
+        <rect x="5" y="2" width="14" height="20" rx="2" stroke="#1093bb" strokeWidth="1.5" />
+        <path d="M9 7h6M9 11h6M9 15h4" stroke="#1093bb" strokeWidth="1.5" strokeLinecap="round" />
+        <circle cx="17" cy="17" r="4" fill="#eff6ff" stroke="#1093bb" strokeWidth="1.5" />
+        <path d="M17 15.5v1.5l1 1" stroke="#1093bb" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
     ),
     title: "Android Tablet Support",
@@ -63,7 +63,7 @@ const smallCards = [
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="#1093bb" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
     title: "SMS & Email Distribution",
@@ -79,9 +79,9 @@ const bottomCards = {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
         <path d="M3 3h18M3 9h18M3 15h18M3 21h18" stroke="#BCC5E3" strokeWidth="1" />
-        <rect x="3" y="11" width="4" height="8" rx="1" fill="#2563eb" opacity="0.4" />
-        <rect x="10" y="7" width="4" height="12" rx="1" fill="#2563eb" opacity="0.7" />
-        <rect x="17" y="4" width="4" height="15" rx="1" fill="#2563eb" />
+        <rect x="3" y="11" width="4" height="8" rx="1" fill="#1093bb" opacity="0.4" />
+        <rect x="10" y="7" width="4" height="12" rx="1" fill="#1093bb" opacity="0.7" />
+        <rect x="17" y="4" width="4" height="15" rx="1" fill="#1093bb" />
       </svg>
     ),
     title: "Advanced Reporting",
@@ -93,7 +93,7 @@ const bottomCards = {
   small: {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="#1093bb" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
     title: "Transaction Integration",
@@ -106,10 +106,10 @@ const bottomCards = {
 function CardHeader({ icon, tag }: { icon: React.ReactNode; tag: string }) {
   return (
     <div className="flex items-center gap-3 mb-4">
-      <div className="w-10 h-10 bg-[#eff6ff] rounded-lg flex items-center justify-center group-hover:bg-[#dbeafe] transition-colors">
+      <div className="w-10 h-10 bg-[#e0f5fb] dark:bg-[#1093bb]/20 rounded-lg flex items-center justify-center group-hover:bg-[#baeaf5] dark:group-hover:bg-[#1093bb]/30 transition-colors">
         {icon}
       </div>
-      <span className="text-xs font-semibold text-[#2563eb] bg-[#eff6ff] px-2.5 py-1 rounded-full uppercase tracking-wide">
+      <span className="text-xs font-semibold text-[#1093bb] dark:text-[#38bdf8] bg-[#e0f5fb] dark:bg-[#1093bb]/20 px-2.5 py-1 rounded-full uppercase tracking-wide">
         {tag}
       </span>
     </div>
@@ -119,27 +119,27 @@ function CardHeader({ icon, tag }: { icon: React.ReactNode; tag: string }) {
 function CardBody({ title, description }: { title: string; description: string }) {
   return (
     <>
-      <h3 className="text-lg font-bold text-[#00174b] mb-2" style={{ fontFamily: "var(--font-manrope)" }}>
+      <h3 className="text-lg font-bold text-[#00174b] dark:text-white mb-2" style={{ fontFamily: "var(--font-manrope)" }}>
         {title}
       </h3>
-      <p className="text-[#3B4862] text-sm leading-relaxed">{description}</p>
+      <p className="text-[#3B4862] dark:text-[#8fa3c8] text-sm leading-relaxed">{description}</p>
     </>
   );
 }
 
-const cardBase = "fp-card bg-[#FAFBFF] border border-[#BCC5E3] rounded-lg p-7 hover:border-[#2563eb]/30 group";
+const cardBase = "fp-card bg-[#FAFBFF] dark:bg-[#141d2e] border border-[#BCC5E3] dark:border-[#2d3a55] rounded-lg p-7 hover:border-[#2563eb]/30 dark:hover:border-[#2563eb]/50 group";
 
 export default function Features() {
   return (
-    <section id="features" className="py-24 px-6 bg-[#F2F6FF]">
+    <section id="features" className="py-24 px-6 bg-[#F2F6FF] dark:bg-[#0f1523]">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="mb-14">
-          <p className="text-[#2563eb] text-sm font-semibold uppercase tracking-widest mb-3">
+          <p className="text-[#2563eb] dark:text-[#60a5fa] text-sm font-semibold uppercase tracking-widest mb-3">
             Features
           </p>
           <h2
-            className="text-4xl md:text-5xl font-bold text-[#00174b] leading-tight max-w-2xl"
+            className="text-4xl md:text-5xl font-bold text-[#00174b] dark:text-white leading-tight max-w-2xl"
             style={{ fontFamily: "var(--font-manrope)" }}
           >
             Everything you need to collect better feedback

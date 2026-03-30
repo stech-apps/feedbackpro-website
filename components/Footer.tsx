@@ -73,11 +73,11 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="mb-4">
               <Image
-                src="/logo.svg"
+                src="/logo-fbp.svg"
                 alt="FeedbackPro"
                 width={216}
                 height={72}
-                className="h-11 w-auto brightness-0 invert"
+                className="h-11 w-auto"
               />
             </div>
             <p className="text-white/60 text-sm leading-relaxed max-w-xs mb-4">

@@ -32,15 +32,15 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-24 px-6 bg-[#FAFBFF]">
+    <section id="how-it-works" className="py-24 px-6 bg-[#FAFBFF] dark:bg-[#141d2e]">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="mb-16 text-center max-w-2xl mx-auto">
-          <p className="text-[#2563eb] text-sm font-semibold uppercase tracking-widest mb-3">
+          <p className="text-[#2563eb] dark:text-[#60a5fa] text-sm font-semibold uppercase tracking-widest mb-3">
             How It Works
           </p>
           <h2
-            className="text-4xl md:text-5xl font-bold text-[#00174b] leading-tight"
+            className="text-4xl md:text-5xl font-bold text-[#00174b] dark:text-white leading-tight"
             style={{ fontFamily: "var(--font-manrope)" }}
           >
             From survey to insight in 3 steps
@@ -50,7 +50,7 @@ export default function HowItWorks() {
         {/* Steps */}
         <div className="grid md:grid-cols-3 gap-8 relative">
           {/* Connector line */}
-          <div className="hidden md:block absolute top-8 left-[16.67%] right-[16.67%] h-px bg-[#BCC5E3] z-0" />
+          <div className="hidden md:block absolute top-8 left-[16.67%] right-[16.67%] h-px bg-[#BCC5E3] dark:bg-[#2d3a55] z-0" />
 
           {steps.map((step, i) => (
             <div key={step.number} className="relative z-10">
@@ -58,8 +58,8 @@ export default function HowItWorks() {
               <div
                 className={`w-16 h-16 rounded-full flex items-center justify-center font-bold text-xl mb-6 border-2 ${
                   i === 1
-                    ? "bg-[#00174b] border-[#00174b] text-white"
-                    : "bg-[#FAFBFF] border-[#BCC5E3] text-[#00174b]"
+                    ? "bg-[#00174b] dark:bg-[#2563eb] border-[#00174b] dark:border-[#2563eb] text-white"
+                    : "bg-[#FAFBFF] dark:bg-[#1a2235] border-[#BCC5E3] dark:border-[#2d3a55] text-[#00174b] dark:text-white"
                 }`}
                 style={{ fontFamily: "var(--font-manrope)" }}
               >
@@ -67,15 +67,15 @@ export default function HowItWorks() {
               </div>
 
               <h3
-                className="text-xl font-bold text-[#00174b] mb-3"
+                className="text-xl font-bold text-[#00174b] dark:text-white mb-3"
                 style={{ fontFamily: "var(--font-manrope)" }}
               >
                 {step.title}
               </h3>
-              <p className="text-[#3B4862] text-sm leading-relaxed mb-4">
+              <p className="text-[#3B4862] dark:text-[#8fa3c8] text-sm leading-relaxed mb-4">
                 {step.description}
               </p>
-              <p className="text-xs text-[#2563eb] font-medium mb-5">{step.detail}</p>
+              <p className="text-xs text-[#1093bb] dark:text-[#38bdf8] font-medium mb-5">{step.detail}</p>
 
               {/* Screenshot */}
               {step.image ? (
@@ -89,7 +89,7 @@ export default function HowItWorks() {
                   />
                 </div>
               ) : (
-                <div className="aspect-[16/10] bg-[#EBF0FA] rounded-lg border border-dashed border-[#BCC5E3] flex flex-col items-center justify-center gap-2">
+                <div className="aspect-[16/10] bg-[#EBF0FA] dark:bg-[#1a2235] rounded-lg border border-dashed border-[#BCC5E3] dark:border-[#2d3a55] flex flex-col items-center justify-center gap-2">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <rect x="2" y="4" width="20" height="14" rx="2" stroke="#97A3C3" strokeWidth="1.5" />
                     <path d="M2 8h20" stroke="#97A3C3" strokeWidth="1.5" />
@@ -103,15 +103,15 @@ export default function HowItWorks() {
         </div>
 
         {/* CTA strip */}
-        <div className="mt-16 bg-[#eff6ff] border border-[#bfdbfe] rounded-lg p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="mt-16 bg-[#eff6ff] dark:bg-[#1e3a6e]/30 border border-[#bfdbfe] dark:border-[#2d5099] rounded-lg p-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <p
-              className="text-lg font-bold text-[#00174b] mb-1"
+              className="text-lg font-bold text-[#00174b] dark:text-white mb-1"
               style={{ fontFamily: "var(--font-manrope)" }}
             >
               Ready to collect better feedback?
             </p>
-            <p className="text-sm text-[#3B4862]">
+            <p className="text-sm text-[#3B4862] dark:text-[#8fa3c8]">
               Start your free 1-month trial. No credit card required.
             </p>
           </div>

@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+/* Switch Tailwind's dark: variant to class-based so a toggle can override system preference */
+@variant dark (&:where(.dark, .dark *));
+
 @theme {
   /* Tinted neutrals — every neutral carries a trace of brand blue (#2563eb) */
   --color-fp-bg: #F2F6FF;          /* page bg — white + 3% brand blue */
@@ -16,6 +19,8 @@
   --color-fp-muted-2: #697890;     /* lighter muted */
   --color-fp-border: #BCC5E3;      /* grey + 6% brand blue */
   --color-fp-border-dark: #97A3C3; /* grey + 8% brand blue */
+  --color-fp-teal: #1093bb;
+  --color-fp-teal-light: #e0f5fb;
   --color-fp-success: #22c55e;
   --color-fp-success-light: #f0fdf4;
   --color-fp-amber: #f59e0b;
@@ -30,6 +35,23 @@
 :root {
   --background: #F2F6FF;
   --foreground: #0F1523;
+}
+
+html.dark {
+  --background: #0f1523;
+  --foreground: #f0f4ff;
+}
+
+/* Hero section grid lines */
+.hero-grid {
+  background-image: linear-gradient(#BCC5E3 1px, transparent 1px), linear-gradient(90deg, #BCC5E3 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.25;
+}
+
+html.dark .hero-grid {
+  background-image: linear-gradient(#2d3a55 1px, transparent 1px), linear-gradient(90deg, #2d3a55 1px, transparent 1px);
+  opacity: 0.4;
 }
 
 .fp-card {

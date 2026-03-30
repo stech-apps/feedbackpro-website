@@ -28,8 +28,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${inter.variable}`}>
-      <body className="min-h-screen flex flex-col bg-[#f7f9fb] text-[#191c1e]">
+    <html lang="en" className={`${manrope.variable} ${inter.variable}`} suppressHydrationWarning>
+      <head>
+        {/* Anti-flash: set dark class before first paint based on stored preference or system preference */}
+        <script dangerouslySetInnerHTML={{ __html: `(function(){var s=localStorage.getItem('theme'),p=window.matchMedia('(prefers-color-scheme: dark)').matches;if(s==='dark'||(s!=='light'&&p)){document.documentElement.classList.add('dark');}})();` }} />
+      </head>
+      <body className="min-h-screen flex flex-col bg-(--background) text-(--foreground)">
         {children}
         {/* Vbout tracking */}
         <Script id="vbout-init" strategy="afterInteractive">{`
