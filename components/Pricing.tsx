@@ -267,8 +267,8 @@ export default function Pricing() {
         {/* Note */}
         <p className="text-center text-xs text-[#697890] dark:text-[#4d6080] mt-8">
           {currency === "PKR"
-            ? "All prices in Pakistani Rupees (PKR). Annual plan billed as a lump sum upfront. Cancel anytime."
-            : "All prices in USD. Annual plan billed upfront. Cancel anytime."}
+            ? "All prices in Pakistani Rupees (PKR). Annual plan billed upfront. Annual subscriptions refundable within 30 days if unused."
+            : "All prices in USD. Annual plan billed upfront. Annual subscriptions refundable within 30 days if unused."}
         </p>
       </div>
     </section>
