@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 type Currency = "PKR" | "USD";
 
@@ -11,13 +11,21 @@ const plans = [
     priceUSD: "Free",
     period: "1 month",
     description: "Test the full platform before you commit",
+    includesAll: null,
     features: [
-      "100 responses",
-      "1 device",
+      "Up to 1 device",
       "Up to 2 surveys",
-      "Basic reporting",
-      "Web & tablet collection",
+      "Web & Tablet response collection",
+      "Advanced analytics",
+      "Satisfaction Score",
+      "SMS & email distribution",
+      "Email alerts for below-average responses",
+      "Data export",
+      "Offline mode",
+      "Transaction tag integration",
+      "Priority support",
     ],
+    limit: "Limited to 100 responses · 1 month only",
     cta: "Start free trial",
     ctaStyle: "outline",
     popular: false,
@@ -28,15 +36,11 @@ const plans = [
     priceUSD: "$35",
     period: "per month",
     description: "For businesses collecting ongoing feedback",
+    includesAll: "Everything in Free Trial, plus",
     features: [
       "Unlimited responses",
-      "1 device",
-      "Up to 2 surveys",
-      "Advanced reporting",
-      "SMS & email distribution",
-      "Offline mode",
-      "Data export (CSV/Excel)",
     ],
+    limit: null,
     cta: "Get Standard",
     ctaStyle: "outline",
     popular: false,
@@ -48,17 +52,9 @@ const plans = [
     period: "per month",
     billing: "Billed annually",
     description: "Best value — save 40% by paying annually",
-    features: [
-      "Unlimited responses",
-      "1 device",
-      "Up to 2 surveys",
-      "Advanced reporting",
-      "SMS & email distribution",
-      "Offline mode",
-      "Data export (CSV/Excel)",
-      "Scheduled reports",
-      "Priority support",
-    ],
+    includesAll: "Everything in Standard",
+    features: [],
+    limit: null,
     cta: "Get Popular",
     ctaStyle: "filled",
     popular: true,
@@ -69,6 +65,7 @@ const plans = [
     priceUSD: "Custom",
     period: "pricing",
     description: "For large organizations with multiple locations",
+    includesAll: null,
     features: [
       "Unlimited responses",
       "10+ devices",
@@ -79,6 +76,7 @@ const plans = [
       "SLA guarantee",
       "Custom integrations",
     ],
+    limit: null,
     cta: "Contact us",
     ctaStyle: "outline",
     popular: false,
@@ -86,7 +84,26 @@ const plans = [
 ];
 
 export default function Pricing() {
-  const [currency, setCurrency] = useState<Currency>("PKR");
+  const [currency, setCurrency] = useState<Currency>("USD");
+
+  useEffect(() => {
+    const stored = localStorage.getItem("currency") as Currency | null;
+    if (stored === "PKR" || stored === "USD") {
+      setCurrency(stored);
+      return;
+    }
+    fetch("/api/geo")
+      .then((r) => r.json())
+      .then(({ country }: { country: string }) => {
+        setCurrency(country === "PK" ? "PKR" : "USD");
+      })
+      .catch(() => {});
+  }, []);
+
+  function handleCurrencyChange(c: Currency) {
+    setCurrency(c);
+    localStorage.setItem("currency", c);
+  }
 
   return (
     <section id="pricing" className="py-24 px-6 bg-[#F2F6FF] dark:bg-[#0f1523]">
@@ -111,7 +128,7 @@ export default function Pricing() {
             {(["PKR", "USD"] as Currency[]).map((c) => (
               <button
                 key={c}
-                onClick={() => setCurrency(c)}
+                onClick={() => handleCurrencyChange(c)}
                 className={`px-5 py-1.5 rounded-md text-sm font-semibold transition-all ${
                   currency === c
                     ? "bg-[#00174b] dark:bg-[#2563eb] text-white shadow-sm"
@@ -170,7 +187,7 @@ export default function Pricing() {
                     </span>
                   )}
                 </div>
-                {plan.billing && (
+                {"billing" in plan && plan.billing && (
                   <p className="text-xs text-[#93c5fd] mb-2">{plan.billing}</p>
                 )}
                 <p
@@ -184,6 +201,17 @@ export default function Pricing() {
 
               {/* Features */}
               <ul className="flex flex-col gap-2.5 mb-8 flex-1">
+                {/* "Includes everything in X" row */}
+                {plan.includesAll && (
+                  <li className={`text-sm font-medium pb-2 mb-0.5 border-b ${
+                    plan.popular
+                      ? "text-[#93c5fd] border-white/10"
+                      : "text-[#2563eb] dark:text-[#60a5fa] border-[#BCC5E3] dark:border-[#2d3a55]"
+                  }`}>
+                    {plan.includesAll}
+                  </li>
+                )}
+
                 {plan.features.map((f) => (
                   <li key={f} className="flex items-start gap-2.5">
                     <svg
@@ -208,6 +236,15 @@ export default function Pricing() {
                     </span>
                   </li>
                 ))}
+
+                {/* Trial limit note */}
+                {plan.limit && (
+                  <li className={`text-xs mt-1 ${
+                    plan.popular ? "text-white/40" : "text-[#697890] dark:text-[#4d6080]"
+                  }`}>
+                    {plan.limit}
+                  </li>
+                )}
               </ul>
 
               {/* CTA */}

@@ -20,6 +20,13 @@ export const metadata: Metadata = {
   description:
     "Easily design surveys, collect feedback on web & Android tablets (even offline!), and gain actionable insights to grow your business.",
   keywords: "feedback, surveys, customer feedback, employee feedback, offline surveys, feedback platform, global, international",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -31,7 +38,7 @@ export default function RootLayout({
     <html lang="en" className={`${manrope.variable} ${inter.variable}`} suppressHydrationWarning>
       <head>
         {/* Anti-flash: set dark class before first paint based on stored preference or system preference */}
-        <script dangerouslySetInnerHTML={{ __html: `(function(){if(localStorage.getItem('theme')==='dark'){document.documentElement.classList.add('dark');}})();` }} />
+        <script dangerouslySetInnerHTML={{ __html: `(function(){var t=localStorage.getItem('theme');if(t==='dark'||(t===null&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark');}})();` }} />
       </head>
       <body className="min-h-screen flex flex-col bg-(--background) text-(--foreground)">
         {children}
