@@ -168,8 +168,8 @@ export default function Footer() {
             <a href="tel:+923111178324" className="text-white/50 hover:text-white text-xs transition-colors">
               (+92) 311 11 78324
             </a>
-            <a href="mailto:info@feedbackpro.io" className="text-white/50 hover:text-white text-xs transition-colors">
-              info@feedbackpro.io
+            <a href="mailto:hello@feedbackpro.io" className="text-white/50 hover:text-white text-xs transition-colors">
+              hello@feedbackpro.io
             </a>
           </div>
         </div>
