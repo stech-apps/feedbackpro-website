@@ -20,6 +20,7 @@ export async function POST(request: Request) {
   const params = new URLSearchParams({
     listid: VBOUT_LIST_ID,
     status: 'Active',
+    doubleoptin: '1', // 1 = Enabled, 0 = Disabled
     email,
     [`fields[${VBOUT_MESSAGE_FIELD}]`]: message,
   })
