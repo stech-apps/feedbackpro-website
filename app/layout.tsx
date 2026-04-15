@@ -47,6 +47,7 @@ export default function RootLayout({
           var _vbset = _vbset || [];
           _vbset.push(['_account', 'VBT-07081-12251']);
           _vbset.push(['_domain', 'https://feedbackpro.io']);
+          _vbset.push(['__vbvar__', ['_doubleOptin', '1']]); // 1 = Enabled, 0 = Disabled
           (function() {
             var vbt = document.createElement('script'); vbt.type = 'text/javascript'; vbt.async = true;
             vbt.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.vbt.io/tracker?_account='+_vbset[0][1]+'&_domain='+_vbset[1][1];

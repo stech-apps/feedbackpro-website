@@ -54,7 +54,7 @@ function ContactForm() {
         disabled={status === 'sending' || status === 'sent'}
         className="w-full bg-[#2563eb] hover:bg-[#1d4ed8] disabled:opacity-60 text-white text-sm font-semibold py-2.5 rounded-lg transition-colors"
       >
-        {status === 'sending' ? 'Sending…' : status === 'sent' ? 'Message sent ✓' : 'Send message'}
+        {status === 'sending' ? 'Sending…' : status === 'sent' ? 'Check your email ✓' : 'Send message'}
       </button>
       {status === 'error' && (
         <p className="text-red-400 text-xs">Something went wrong — please try again or email us directly.</p>
