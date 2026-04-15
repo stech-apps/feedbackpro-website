@@ -42,17 +42,17 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col bg-(--background) text-(--foreground)">
         {children}
-        {/* Vbout tracking */}
-        <Script id="vbout-init" strategy="afterInteractive">{`
+        {/* Vbout visitor tracking */}
+        <Script id="vbout-tracking" strategy="afterInteractive">{`
           var _vbset = _vbset || [];
           _vbset.push(['_account', 'VBT-07081-12251']);
           _vbset.push(['_domain', 'https://feedbackpro.io']);
+          (function() {
+            var vbt = document.createElement('script'); vbt.type = 'text/javascript'; vbt.async = true;
+            vbt.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.vbt.io/tracker?_account='+_vbset[0][1]+'&_domain='+_vbset[1][1];
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vbt, s);
+          })();
         `}</Script>
-        <Script
-          src="https://www.vbt.io/ext/vbt.js"
-          strategy="afterInteractive"
-          async
-        />
       </body>
     </html>
   );
