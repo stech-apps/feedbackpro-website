@@ -19,7 +19,7 @@ export async function POST(request: Request) {
   // Build request to Vbout AddContact endpoint (key must be a URL query param)
   const params = new URLSearchParams({
     listid: VBOUT_LIST_ID,
-    status: 'Active',
+    status: 'unconfirmed',
     email,
     [`fields[${VBOUT_MESSAGE_FIELD}]`]: message,
   })
