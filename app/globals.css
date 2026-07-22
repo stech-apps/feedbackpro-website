@@ -40,6 +40,15 @@
 html.dark {
   --background: #0f1523;
   --foreground: #f0f4ff;
+  --color-fp-bg: #0f1523;
+  --color-fp-surface: #1a2235;
+  --color-fp-surface-2: #1e2a45;
+  --color-fp-navy: #ffffff;
+  --color-fp-navy-hover: #60a5fa;
+  --color-fp-blue-light: #1e2a45;
+  --color-fp-muted: #8fa3c8;
+  --color-fp-muted-2: #4d6080;
+  --color-fp-border: #2d3a55;
 }
 
 /* Hero section grid lines */

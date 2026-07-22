@@ -5,16 +5,16 @@ export default function PostLayout({ children }: { children: React.ReactNode }) 
         className="prose prose-lg max-w-none
           prose-headings:font-extrabold prose-headings:tracking-tight
           prose-h1:text-4xl prose-h2:text-2xl prose-h3:text-xl
-          prose-a:text-[#2563eb] prose-a:no-underline hover:prose-a:underline
+          prose-a:text-[var(--color-fp-blue)] prose-a:no-underline hover:prose-a:underline
           prose-img:rounded-xl prose-img:shadow-md
-          prose-code:text-[#2563eb] prose-code:bg-[#eff6ff] prose-code:px-1 prose-code:rounded
-          prose-blockquote:border-[#2563eb] prose-blockquote:text-[#3B4862]"
+          prose-code:text-[var(--color-fp-blue)] prose-code:bg-[var(--color-fp-blue-light)] prose-code:px-1 prose-code:rounded
+          prose-blockquote:border-[var(--color-fp-blue)] prose-blockquote:text-[var(--color-fp-muted)]"
         style={{
-          '--tw-prose-headings': '#00174b',
-          '--tw-prose-body': '#3B4862',
-          '--tw-prose-bold': '#0F1523',
-          '--tw-prose-links': '#2563eb',
-          '--tw-prose-hr': '#BCC5E3',
+          '--tw-prose-headings': 'var(--color-fp-navy)',
+          '--tw-prose-body': 'var(--color-fp-muted)',
+          '--tw-prose-bold': 'var(--foreground)',
+          '--tw-prose-links': 'var(--color-fp-blue)',
+          '--tw-prose-hr': 'var(--color-fp-border)',
         } as React.CSSProperties}
       >
         {children}
