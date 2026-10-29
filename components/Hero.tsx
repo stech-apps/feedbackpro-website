@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { withUtms } from "@/lib/track";
 
 export default function Hero() {
   return (
@@ -57,8 +58,9 @@ export default function Hero() {
 
             {/* CTA form */}
             <form
+              data-trial-form
               className="flex flex-col sm:flex-row gap-3 max-w-lg mb-6"
-              onSubmit={(e) => { e.preventDefault(); window.location.href = 'https://cloud.feedbackpro.io/account/register'; }}
+              onSubmit={(e) => { e.preventDefault(); window.location.href = withUtms('https://cloud.feedbackpro.io/account/register'); }}
             >
               <input
                 type="email"

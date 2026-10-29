@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Manrope, Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import Analytics from "@/components/Analytics";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -42,6 +44,8 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col bg-(--background) text-(--foreground)">
         {children}
+        <WhatsAppButton />
+        <Analytics />
         {/* Vbout visitor tracking */}
         <Script id="vbout-tracking" strategy="afterInteractive">{`
           var _vbset = _vbset || [];
