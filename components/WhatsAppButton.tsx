@@ -1,6 +1,6 @@
 const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "923111178324"; // S-Tech WhatsApp Business
 
-export function whatsappHref(message = "Hi, I'd like help setting up the FeedbackPro free trial for my business.") {
+export function whatsappHref(message = "Hi, I'd like help setting up customer feedback with the FeedbackPro free trial for my business.") {
   if (!WHATSAPP_NUMBER) return null;
   return `https://wa.me/${WHATSAPP_NUMBER.replace(/\D/g, "")}?text=${encodeURIComponent(message)}`;
 }
