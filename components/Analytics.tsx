@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { captureUtms, track, withUtms } from "@/lib/track";
 
 const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID || "G-75D1H0HBJG"; // FeedbackPro.io GA4 property
-const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
+const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || "1131207426130524"; // FeedbackPro Website dataset
 const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID; // e.g. AW-123456789
 
 /**
