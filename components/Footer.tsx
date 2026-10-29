@@ -123,6 +123,11 @@ export default function Footer() {
                       Blog
                     </Link>
                   </li>
+                  <li>
+                    <Link href="/setup-help" className="text-white/70 hover:text-white text-sm transition-colors">
+                      Free setup help
+                    </Link>
+                  </li>
                 </ul>
               </div>
 
