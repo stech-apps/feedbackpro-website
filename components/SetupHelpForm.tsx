@@ -49,8 +49,8 @@ export default function SetupHelpForm() {
   if (state === "done") {
     return (
       <div className="rounded-lg border border-[#bbf7d0] bg-[#f0fdf4] p-6 text-[#14532d]">
-        <p className="font-semibold text-lg mb-1">Thanks, we&apos;ve got it.</p>
-        <p>A member of our team will contact you on WhatsApp within one working hour (Mon–Sat, 9am–7pm) to set up your free trial.</p>
+        <p className="font-semibold text-lg mb-1">Your signup is almost complete!</p>
+        <p>Please check your email for a confirmation message. If you don&apos;t see it, check your spam folder.</p>
       </div>
     );
   }
