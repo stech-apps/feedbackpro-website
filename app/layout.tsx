@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: "FeedbackPro — The All-In-One Feedback Solution",
   description:
     "Easily design surveys, collect feedback on web & Android tablets (even offline!), and gain actionable insights to grow your business.",
-  keywords: "feedback, surveys, customer feedback, employee feedback, offline surveys, feedback platform, global, international",
+  keywords: "feedback, surveys, customer feedback, employee feedback, offline surveys, on-premise feedback system, air-gapped feedback system, feedback platform, global, international",
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },

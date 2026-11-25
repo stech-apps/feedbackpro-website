@@ -128,6 +128,11 @@ export default function Footer() {
                       Free setup help
                     </Link>
                   </li>
+                  <li>
+                    <Link href="/private-server" className="text-white/70 hover:text-white text-sm transition-colors">
+                      Private Server
+                    </Link>
+                  </li>
                 </ul>
               </div>
 

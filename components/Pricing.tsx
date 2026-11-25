@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 type Currency = "PKR" | "USD";
 
@@ -269,6 +270,13 @@ export default function Pricing() {
           {currency === "PKR"
             ? "All prices in Pakistani Rupees (PKR). Annual plan billed upfront. Annual subscriptions refundable within 30 days if unused."
             : "All prices in USD. Annual plan billed upfront. Annual subscriptions refundable within 30 days if unused."}
+        </p>
+        <p className="text-center text-sm text-[#3B4862] dark:text-[#8fa3c8] mt-4">
+          Need FeedbackPro fully on-premise for an air-gapped network?{" "}
+          <Link href="/private-server" className="text-[#2563eb] dark:text-[#60a5fa] font-semibold hover:underline">
+            Private Server
+          </Link>{" "}
+          is licensed separately.
         </p>
       </div>
     </section>

@@ -5,6 +5,7 @@ const logos = [
   { name: "Boulevard Mall", src: "/images/clients/boulevard-mall.svg", h: "h-28" },
   { name: "DHA Lahore", src: "/images/clients/dha-lahore.svg", h: "h-20" },
   { name: "Engro", src: "/images/clients/engro.svg", h: "h-28" },
+  { name: "Pakistan Navy", src: "/images/clients/pakistan-navy.png", h: "h-20" },
   { name: "South City Hospital", src: "/images/clients/south-city-hospital.svg", h: "h-20" },
   { name: "Gul Ahmed Ideas", src: "/images/clients/gul-ahmed.svg", h: "h-20" },
 ];
@@ -14,7 +15,7 @@ export default function ClientLogos() {
     <section className="bg-[#FAFBFF] dark:bg-[#e8edf5] py-10 border-b border-[#BCC5E3] dark:border-[#c0c8d8]">
       <div className="max-w-6xl mx-auto px-6">
         <p className="text-center text-xs font-semibold text-[#3B4862] dark:text-[#3B4862] uppercase tracking-widest mb-8">
-          Trusted by leading businesses
+          Trusted by leading organizations
         </p>
         <div className="flex flex-wrap items-center justify-center gap-10">
           {logos.map((logo) => (

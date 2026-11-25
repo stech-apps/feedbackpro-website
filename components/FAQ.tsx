@@ -1,4 +1,6 @@
-export type FaqItem = { q: string; a: string };
+import Link from "next/link";
+
+export type FaqItem = { q: string; a: string; href?: string; linkLabel?: string };
 
 export const DEFAULT_FAQ: FaqItem[] = [
   {
@@ -12,6 +14,12 @@ export const DEFAULT_FAQ: FaqItem[] = [
   {
     q: "What if our internet is unreliable?",
     a: "The tablet app saves responses offline and syncs automatically when the connection is back.",
+  },
+  {
+    q: "Can FeedbackPro run without internet, or on our own servers?",
+    a: "Two ways. The tablet app works offline and syncs when the connection returns. For networks that can never connect to the internet, such as government, defense and other secure sites, FeedbackPro Private Server runs fully on-premise and air-gapped. It is licensed separately, and our team handles installation and support. Features that need the internet, like the staff module and email alerts, are not available on Private Server.",
+    href: "/private-server",
+    linkLabel: "See how Private Server works",
   },
   {
     q: "Can surveys be in Urdu?",
@@ -48,6 +56,14 @@ export default function FAQ({ items = DEFAULT_FAQ, title = "Frequently asked que
                 <span className="text-[#2563eb] transition-transform group-open:rotate-45 text-xl leading-none">+</span>
               </summary>
               <p className="mt-3 text-[#3B4862] dark:text-[#8fa3c8] leading-relaxed">{item.a}</p>
+              {item.href && (
+                <Link
+                  href={item.href}
+                  className="inline-block mt-3 text-sm font-semibold text-[#2563eb] dark:text-[#60a5fa] hover:underline"
+                >
+                  {item.linkLabel ?? "Learn more"} →
+                </Link>
+              )}
             </details>
           ))}
         </div>

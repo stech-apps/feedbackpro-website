@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { withUtms } from "@/lib/track";
 
 export default function Hero() {
@@ -78,6 +79,12 @@ export default function Hero() {
             {/* Trust signals */}
             <p className="text-xs text-[#697890] dark:text-[#4d6080]">
               Free for 1 month · No credit card required · 100 responses included
+            </p>
+            <p className="text-xs text-[#697890] dark:text-[#4d6080] mt-2">
+              Need it fully on-premise?{" "}
+              <Link href="/private-server" className="text-[#2563eb] dark:text-[#60a5fa] font-semibold hover:underline">
+                See Private Server →
+              </Link>
             </p>
 
             {/* Google Play badge */}

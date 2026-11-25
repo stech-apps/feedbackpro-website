@@ -40,7 +40,9 @@ const faq = [
     q: "Is this different from the free trial?",
     a: "No. It's the same free trial as on our pricing page (1 device, 2 surveys, 100 responses, 1 month). Our team simply helps you set it up and read the results.",
   },
-  ...DEFAULT_FAQ.filter((f) => !f.q.startsWith("How do we pay")),
+  ...DEFAULT_FAQ.filter(
+    (f) => !f.q.startsWith("How do we pay") && !f.q.startsWith("Can FeedbackPro run without internet"),
+  ),
   {
     q: "What happens after 30 days?",
     a: "You decide. Roll out to more branches on Standard or the annual Popular plan, or stop. There's no contract.",

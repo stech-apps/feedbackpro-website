@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 // Row 1: large cards with images (Design + Devices)
 const largeCards = [
@@ -45,6 +46,7 @@ const smallCards = [
     description:
       "Collect data in remote areas or locations with poor connectivity. FeedbackPro syncs automatically when internet is restored.",
     tag: "Reliability",
+    link: { href: "/private-server", label: "Need no internet at all? See Private Server" },
   },
   {
     icon: (
@@ -171,6 +173,14 @@ export default function Features() {
               <div key={f.title} className={cardBase}>
                 <CardHeader icon={f.icon} tag={f.tag} />
                 <CardBody title={f.title} description={f.description} />
+                {f.link && (
+                  <Link
+                    href={f.link.href}
+                    className="inline-block mt-3 text-sm font-semibold text-[#2563eb] dark:text-[#60a5fa] hover:underline"
+                  >
+                    {f.link.label} →
+                  </Link>
+                )}
               </div>
             ))}
           </div>
@@ -187,6 +197,58 @@ export default function Features() {
             <div className={cardBase}>
               <CardHeader icon={bottomCards.small.icon} tag={bottomCards.small.tag} />
               <CardBody title={bottomCards.small.title} description={bottomCards.small.description} />
+            </div>
+          </div>
+
+          {/* Row 4: Private Server callout */}
+          <div className="rounded-lg bg-[#00174b] dark:bg-[#141d2e] border border-[#00174b] dark:border-[#2d3a55] p-8 md:p-10 grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
+            <div className="md:col-span-3">
+              <span className="inline-block text-xs font-semibold text-[#93c5fd] bg-white/10 px-2.5 py-1 rounded-full uppercase tracking-wide mb-4">
+                Private Server
+              </span>
+              <h3
+                className="text-2xl md:text-3xl font-bold text-white mb-3"
+                style={{ fontFamily: "var(--font-manrope)" }}
+              >
+                Need feedback to stay inside your network?
+              </h3>
+              <p className="text-white/75 leading-relaxed">
+                FeedbackPro Private Server is a fully on-premise, air-gapped deployment. Create surveys, collect
+                responses and run reports on your own secure network, with no internet connection and all data stored
+                on-premise.
+              </p>
+              <p className="text-white/50 text-xs mt-4">
+                Licensed separately. Features that need the internet, such as the staff module and email alerts, are not
+                available.
+              </p>
+            </div>
+            <div className="md:col-span-2">
+              <ul className="flex flex-col gap-3 mb-6">
+                {[
+                  "Runs entirely on your internal network",
+                  "All feedback data stored on-premise",
+                  "Built for government, defense and high-security teams",
+                ].map((point) => (
+                  <li key={point} className="flex gap-3 text-white/85 text-sm">
+                    <span className="text-[#22c55e] font-bold">✓</span>
+                    {point}
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="/private-server"
+                  className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors"
+                >
+                  Explore Private Server
+                </Link>
+                <a
+                  href="#contact"
+                  className="border border-white/25 hover:border-white/60 text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors"
+                >
+                  Talk to our team
+                </a>
+              </div>
             </div>
           </div>
         </div>
